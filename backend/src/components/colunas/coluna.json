@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_colunas_colunas",
+  "info": {
+    "displayName": "Coluna",
+    "icon": "columns",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Titulo": {
+      "type": "string"
+    },
+    "Conteudo": {
+      "type": "richtext"
+    },
+    "Lista": {
+      "type": "enumeration",
+      "enum": [
+        "Ex:",
+        "facebook",
+        "twitter"
+      ]
+    }
+  }
+}

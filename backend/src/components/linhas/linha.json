@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_linhas_linhas",
+  "info": {
+    "displayName": "Linha",
+    "icon": "grip-lines"
+  },
+  "options": {},
+  "attributes": {
+    "Coluna": {
+      "type": "component",
+      "repeatable": true,
+      "component": "colunas.coluna"
+    }
+  }
+}
