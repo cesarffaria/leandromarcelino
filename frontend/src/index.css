@@ -1,3 +1,12 @@
 #TERASTUDIO-brand{
     width: 200px;
 }
+
+#leftBar,
+#leftBar > div.row {
+    height: 100%;
+}
+
+#leftBar > div.row > div {
+    transform: rotate(-90deg);
+}
