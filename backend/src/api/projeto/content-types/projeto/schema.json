@@ -4,7 +4,8 @@
   "info": {
     "singularName": "projeto",
     "pluralName": "projetos",
-    "displayName": "Projeto"
+    "displayName": "Projeto",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,11 +22,17 @@
       "required": true
     },
     "Galeria": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titulo",
+      "required": true
     }
   }
 }

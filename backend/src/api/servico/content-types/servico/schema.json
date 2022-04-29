@@ -4,7 +4,8 @@
   "info": {
     "singularName": "servico",
     "pluralName": "servicos",
-    "displayName": "Serviço"
+    "displayName": "Serviço",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,17 +18,30 @@
       "unique": true
     },
     "Imagem": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "Descricao": {
+      "type": "text",
+      "required": true,
+      "unique": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Nome",
+      "required": true
+    },
+    "Icon": {
       "allowedTypes": [
         "images"
       ],
       "type": "media",
       "multiple": false,
       "required": true
-    },
-    "Descricao": {
-      "type": "text",
-      "required": true,
-      "unique": true
     }
   }
 }

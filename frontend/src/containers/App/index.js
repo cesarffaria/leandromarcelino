@@ -7,7 +7,8 @@ import Rigth from "../../components/Rigth";
 import Header from "../../components/Header";
 import Homepage from "../../pages/Homepage"
 import Servicos from "../../pages/Servicos";
-import Contactos from "../../pages/Contactos"
+import Contactos from "../../pages/Contactos";
+import Service from "../Service";
 //import Articles from "../Articles";
 //import Article from "../Article";
 //import Category from "../Category";
@@ -29,11 +30,16 @@ function App() {
           </Col>
           <Col lg={10} id="mainContentCol">
             <Header />
-            <Routes>
-              <Route path="/" element={<Homepage />} exact />
-              <Route path="/servicos" element={<Servicos />} exact />
-              <Route path="/contactos" element={<Contactos />} exact />
-            </Routes>
+            <div id="body" className="body">
+              {/*<Slide sliderData={homepageAttributes.Slider.data} sliderName="carouselExampleIndicators"></Slide>*/}
+              <div className="space-4" />
+              <Routes>
+                <Route path="/" element={<Homepage />} exact />
+                <Route path="/servicos" element={<Servicos />} exact />
+                <Route path="/contactos" element={<Contactos />} exact />
+                <Route path="/service/:slug" element={<Service />} exact />
+              </Routes>
+            </div>
             {/*<Footer />*/}
           </Col>
           <Col lg={1} className="rigth">

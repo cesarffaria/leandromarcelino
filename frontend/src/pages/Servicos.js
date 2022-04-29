@@ -17,7 +17,6 @@ const Servicos = () => {
   return (
     <div id="body" className="body">
       <Container>
-        start body
         <Row>
           {servicosData.map((servico) => (
                 <Col key={servico.id}>
@@ -31,7 +30,6 @@ const Servicos = () => {
                 </Col>
           ))}
         </Row>
-        start body
       </Container>
     </div>
 
