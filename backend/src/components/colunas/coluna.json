@@ -12,14 +12,6 @@
     },
     "Conteudo": {
       "type": "richtext"
-    },
-    "Lista": {
-      "type": "enumeration",
-      "enum": [
-        "Ex:",
-        "facebook",
-        "twitter"
-      ]
     }
   }
 }

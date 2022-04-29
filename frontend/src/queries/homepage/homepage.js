@@ -14,18 +14,23 @@ query Homepage {
             }
           }
         }
-        Linhas{
-          ... on ComponentLinhasLinha {
-              Coluna{
-              id,
-              Titulo,
-              Conteudo
+        LEANDROMARCELINO{
+          data{
+            attributes{
+              name
+              url
             }
           }
+        }
+        Descricao
+        Contacto
+        Colunas{
+          Titulo
+          Conteudo
         }
       }
     }
   }
-}`;
-
+}
+`;
 export default HOMEPAGE_QUERY;

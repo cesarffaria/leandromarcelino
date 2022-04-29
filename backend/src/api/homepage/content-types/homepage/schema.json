@@ -28,11 +28,26 @@
         "audios"
       ]
     },
-    "Linhas": {
-      "type": "dynamiczone",
-      "components": [
-        "linhas.linha"
+    "LEANDROMARCELINO": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
       ]
+    },
+    "Descricao": {
+      "type": "richtext",
+      "required": true
+    },
+    "Contacto": {
+      "type": "string",
+      "required": true
+    },
+    "Colunas": {
+      "type": "component",
+      "repeatable": true,
+      "component": "colunas.coluna"
     }
   }
 }

@@ -6,15 +6,8 @@ import {  Navbar, Container, Nav,  } from "react-bootstrap";
 
 const Navigation = ({ name, url }) => {
   return (
-    <Navbar bg="light" variant="light">
+    <Navbar bg="" variant="dark">
       <Container>
-        <NavLink to={{pathname: "/"}} className="navbar-brand">
-          <img
-            alt={name}
-            src={url}
-            className="d-inline-block align-top"
-          />{' '}
-        </NavLink>
         <Nav className="mr-auto">
           <NavLink to={{pathname: "/"}} className="nav-link" >Inicio</NavLink>
           <NavLink to={{pathname: "/servicos"}}  className="nav-link">Serviços</NavLink>
