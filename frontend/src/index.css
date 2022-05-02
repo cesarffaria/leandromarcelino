@@ -138,7 +138,7 @@ body,
     justify-content: center;
     align-items: center;
 }
-.burger > button.burger-button{
+.burger button.burger-button{
     color: unset;
     background: unset;
     border:unset;
@@ -151,7 +151,7 @@ body,
 
 .tituloServico{
     color:#fc9200;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .service-image{
@@ -168,7 +168,66 @@ body,
 }
 a.next-service{
     color:white;
+    text-decoration: none;
 }
 a.next-service:hover{
     color:#fc9200;
+}
+
+.navbar-expand .navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.Menu-list{
+    list-style-type: square;
+    list-style-position:;
+}
+
+.Menu-list li a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.Menu-list li a:hover{
+    text-decoration: none;
+    color:#fc9200;
+}
+
+.Menu-list li {
+    color:#fc9200;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.lista-projetos{
+    list-style: none;
+    padding: 0;
+}
+
+.lista-projetos li button{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    color:white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lista-projetos li.active{
+    background-color: #fc9200;
+}
+
+img.portfolio-imagem-projeto img{
+    object-fit: cover;
+}
+
+.portfolio-titulo-projeto{
+    font-size: 1em;
+    text-decoration: unset;
+}
+
+.portfolio-titulo-projeto{
 }

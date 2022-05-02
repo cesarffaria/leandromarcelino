@@ -53,6 +53,7 @@ const Service = () => {
             />
             <h1 className="tituloServico text-uppercase fw-bold">{servicos.data[0].attributes.Nome}</h1>
           </div>
+          <div className="space-4" />
           <ReactMarkdown children={servicos.data[0].attributes.Descricao} />
           {/*<p>
           <Moment format="MMM Do YYYY">
@@ -81,7 +82,7 @@ const Service = () => {
           </div>
         </Col>
         <Col lg={6} className="d-flex justify-content-end">
-          <Link to={`/service/${nextSlug}`} className="next-service">Seguite</Link> 
+          <Link to={`/service/${nextSlug}`} className="next-service">Seguite {'>'}</Link> 
         </Col>
       </Row>
     </Container>

@@ -9,6 +9,9 @@ import Homepage from "../../pages/Homepage"
 import Servicos from "../../pages/Servicos";
 import Contactos from "../../pages/Contactos";
 import Service from "../Service";
+import Projecto from "../Project";
+import Projectos from "../../pages/Projectos";
+import Menu from "../../pages/MyMenu";
 //import Articles from "../Articles";
 //import Article from "../Article";
 //import Category from "../Category";
@@ -22,8 +25,8 @@ import background2x from "../../assets/background_2x.jpg";
 
 function App() {
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundRepeat:"no-repeat", backgroundColor:"black"}}>
-      <Container fluid >
+    <div className="App" >
+      <Container fluid style={{ backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundRepeat:"no-repeat", backgroundColor:"black"}} >
         <Row>
           <Col lg={1}>
             <Left />
@@ -36,8 +39,11 @@ function App() {
               <Routes>
                 <Route path="/" element={<Homepage />} exact />
                 <Route path="/servicos" element={<Servicos />} exact />
-                <Route path="/contactos" element={<Contactos />} exact />
+                <Route path="/portfolio" element={<Projectos />} exact />
+                <Route path="/portfolio/:slug" element={<Projecto />} exact />
                 <Route path="/service/:slug" element={<Service />} exact />
+                <Route path="/contactos" element={<Contactos />} exact />
+                <Route path="/menu" element={<Menu />} exact />
               </Routes>
             </div>
             {/*<Footer />*/}

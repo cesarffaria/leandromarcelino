@@ -30,7 +30,7 @@ const Left = () => {
                         />
                     </NavLink>
                 </div>
-                <div>94627 - PUB</div>
+                <div style={{color: '#fc9200'}}>94627 - PUB</div>
                 <div><p>©Leandro Marcelino 2022.<br />Todos os direitos reservados.</p></div>
             </div>
         </div>
