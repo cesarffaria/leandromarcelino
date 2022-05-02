@@ -26,8 +26,33 @@ const Header = () => {
   const headerNome = headerAttributes.Nome;
   const headerLogoURL = process.env.REACT_APP_BACKEND_URL + headerAttributes.Logo.data.attributes.url;
 
+  const hamburger = () => {
+    //console.log("before: " + menuStatus);
+    menuStatus == "open" ? setMenuStatus("closed") : setMenuStatus("open");
+
+    //console.log("before: " + menuStatus);
+  }
+
   return (
     <div id="header" className="header">
+      <div className="header-mobile d-flex">
+        <NavLink to={{ pathname: "/" }} className="navbar-brand">
+          <img
+            alt={headerNome}
+            src={headerLogoURL}
+            className="d-inline-block align-top"
+          />
+        </NavLink>
+        <p>LEANDRO
+        MARCELINO</p>
+        <div className="burger">
+          <Link to={menuStatus == "closed" ? `/menu` : `/`}>
+            <button className='burger-button' onClick={hamburger}>
+              <img src={menuStatus == "closed" ? burger : closedBurger} />
+            </button>
+          </Link>
+        </div>
+      </div>
       <Navigation name={headerNome} url={headerLogoURL} />
     </div>
   );
