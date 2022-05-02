@@ -52,7 +52,7 @@ const Project = () => {
           <ReactMarkdown children={projetos.data[0].attributes.Descricao} />
           <div className="space-4" />
 
-          <Link to={`/portfolio/${nextSlug}`} className="next-service">Seguite {'>'}</Link>
+          <Link to={`/portfolio/${nextSlug}`} className="next-service">Seguinte {'>'}</Link>
         </Col>
         <Col lg={6}>
           <Row>
