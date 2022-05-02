@@ -11,7 +11,7 @@ const MyMenu = () => {
         <Col lg={12}>
           <ul className="Menu-list">
             <li>
-              <Link to={`/sobre`}>
+              <Link to={`/`}>
                 SOBRE
               </Link>
             </li>

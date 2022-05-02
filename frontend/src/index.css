@@ -109,6 +109,12 @@ body,
     }
 }
 
+@media only screen and (max-width:1000px) {
+    .space-4 {
+        height: 2em !important;
+    }
+}
+
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -138,10 +144,13 @@ body,
     justify-content: center;
     align-items: center;
 }
-.burger button.burger-button{
+.burger img{
     color: unset;
     background: unset;
     border:unset;
+}
+
+.burger-desktop img{
     transform: rotate(90deg);
 }
 .burger img{
