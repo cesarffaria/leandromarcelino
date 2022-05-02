@@ -82,7 +82,7 @@ const Service = () => {
           </div>
         </Col>
         <Col lg={6} className="d-flex justify-content-end">
-          <Link to={`/service/${nextSlug}`} className="next-service">Seguite {'>'}</Link> 
+          <Link to={`/service/${nextSlug}`} className="next-service">Seguinte {'>'}</Link> 
         </Col>
       </Row>
     </Container>
