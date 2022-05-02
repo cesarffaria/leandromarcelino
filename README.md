@@ -1,4 +1,4 @@
-# marta-gon
+# leandromarcelino
 
 ## must haves strapi 
 yarn add @strapi/plugin-graphql
