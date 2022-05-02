@@ -34,28 +34,29 @@ import background2x from "../../assets/background_2x.jpg";
 function App() {
   const left = () => {
     if (!isMobile) {
-      return(
-      <Col lg={1}>
-        <Left />
-      </Col>
+      return (
+        <Col lg={1}>
+          <Left />
+        </Col>
       );
     }
   }
   const right = () => {
     if (!isMobile) {
-      return(
-      <Col lg={1} className="rigth">
-        <Rigth />
-      </Col>
+      return (
+        <Col lg={1} className="rigth">
+          <Rigth />
+        </Col>
       );
     }
   }
+
   return (
     <div className="App" >
-      <Container fluid style={{ backgroundImage: `url(${background})`, backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor: "black" }} >
+      <Container fluid style={{ backgroundImage: `url(${background2x})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor: "black" }} >
         <Row>
           {left()}
-          <Col lg={isMobile ? 12 : 10 } id="mainContentCol">
+          <Col lg={isMobile ? 12 : 10} id="mainContentCol">
             {!isMobile ? <Header /> : <HeaderMobile />}
             <div id="body" className="body">
               {/*<Slide sliderData={homepageAttributes.Slider.data} sliderName="carouselExampleIndicators"></Slide>*/}
