@@ -50,7 +50,6 @@ function App() {
       );
     }
   }
-
   return (
     <div className="App" >
       <Container fluid style={{ backgroundImage: `url(${background2x})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor: "black" }} >

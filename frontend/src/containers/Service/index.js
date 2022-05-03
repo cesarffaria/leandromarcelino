@@ -1,9 +1,10 @@
-import React , { useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router";
 import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
+import { isMobile } from 'react-device-detect';
 
 
 import { Row, Col, Container, Button } from "react-bootstrap";
@@ -24,14 +25,23 @@ const Service = () => {
   if (error) return <p>Error :(</p>
 
   let nextSlug = "";
-  for(let i=0 ; i < dataR.servicos.data.length + 0 ; i++){
-    if ( dataR.servicos.data[i].id == data.servicos.data[0].id){
-      if(dataR.servicos.data.length != i+1){
-        nextSlug = dataR.servicos.data[i+1].attributes.Slug;
+  let prevSlug = "";
+  let currentIndex = 0;
+  for (let i = 0; i < dataR.servicos.data.length + 0; i++) {
+    if (dataR.servicos.data[i].id == data.servicos.data[0].id) {
+      if (dataR.servicos.data.length != i + 1) {
+        nextSlug = dataR.servicos.data[i + 1].attributes.Slug;
       }
-      else{
+      else {
         nextSlug = dataR.servicos.data[0].attributes.Slug;
       }
+      if (i - 1 == -1) {
+        prevSlug = dataR.servicos.data[dataR.servicos.data.length - 1].attributes.Slug;
+      }
+      else {
+        prevSlug = dataR.servicos.data[i - 1].attributes.Slug;
+      }
+      currentIndex = i;
     }
   }
 
@@ -43,8 +53,33 @@ const Service = () => {
   const iconUrl = process.env.REACT_APP_BACKEND_URL +
     servicos.data[0].attributes.Icon.data.attributes.url;
 
+  const prevNext = () => {
+    if (isMobile) {
+      return (
+      <Row>
+        <div className="d-flex justify-content-around">
+          <Link to={`/service/${prevSlug}`} className="next-service">{'<'}</Link>
+          <p>
+            {servicos.data[0].attributes.Nome}
+          </p>
+          <Link to={`/service/${nextSlug}`} className="next-service">{'>'}</Link>
+        </div>
+        <div className="container-dots d-flex gap-3 justify-content-center">
+          {Array.from({ length: dataR.servicos.data.length }).map((item, index) => (
+            <div
+            key={index + 1}
+              className={currentIndex === index ? "dot active" : "dot"}
+            ></div>
+          ))}
+        </div>
+      </Row>
+      );
+    }
+  }
+
   return (
     <Container>
+      {prevNext()}
       <Row>
         <Col lg={6}>
           <div className="d-flex gap-4">
@@ -82,7 +117,7 @@ const Service = () => {
           </div>
         </Col>
         <Col lg={6} className="d-flex justify-content-end">
-          <Link to={`/service/${nextSlug}`} className="next-service">Seguinte {'>'}</Link> 
+          <Link to={`/service/${nextSlug}`} className="next-service">Seguinte {'>'}</Link>
         </Col>
       </Row>
     </Container>
