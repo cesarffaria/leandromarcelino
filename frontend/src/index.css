@@ -341,12 +341,9 @@ body,
     display: block;
 }
 
-#footer-bottom #TERASTUDIO-brand {
-    min-width: 170px;
-}
-
 #TERASTUDIO-brand {
     width: 100%;
+    min-width: 170px;
     max-width: 200px;
 }
 /** -- end FOOTER -- **/
