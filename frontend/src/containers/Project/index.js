@@ -4,6 +4,7 @@ import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
+import { isMobile } from 'react-device-detect';
 
 
 import { Row, Col, Container, Button } from "react-bootstrap";
@@ -27,6 +28,8 @@ const Project = () => {
   if (error) return <p>Error :(</p>
 
   let nextSlug = "";
+  let prevSlug = "";
+  let currentIndex = 0;
   for (let i = 0; i < dataR.projetos.data.length + 0; i++) {
     if (dataR.projetos.data[i].id == data.projetos.data[0].id) {
       if (dataR.projetos.data.length != i + 1) {
@@ -35,6 +38,46 @@ const Project = () => {
       else {
         nextSlug = dataR.projetos.data[0].attributes.Slug;
       }
+      if (i - 1 == -1) {
+        prevSlug = dataR.projetos.data[dataR.projetos.data.length - 1].attributes.Slug;
+      }
+      else {
+        prevSlug = dataR.projetos.data[i - 1].attributes.Slug;
+      }
+      currentIndex = i;
+    }
+  }
+
+
+  const prevNext = () => {
+    if (isMobile) {
+      return (
+      <Row>
+        <div className="d-flex justify-content-around">
+          <Link to={`/portfolio/${prevSlug}`} className="next-service">{'<'}</Link>
+          <p>
+            {projetos.data[0].attributes.Titulo}
+          </p>
+          <Link to={`/portfolio/${nextSlug}`} className="next-service">{'>'}</Link>
+        </div>
+        <div className="container-dots d-flex gap-3 justify-content-center">
+          {Array.from({ length: dataR.projetos.data.length }).map((item, index) => (
+            <div
+            key={index + 1}
+              className={currentIndex === index ? "dot active" : "dot"}
+            ></div>
+          ))}
+        </div>
+      </Row>
+      );
+    }
+  }
+
+  const next = () => {
+    if (!isMobile) {
+      return (
+        <Link to={`/portfolio/${nextSlug}`} className="next-service">Seguinte {'>'}</Link>
+      );
     }
   }
 
@@ -45,14 +88,14 @@ const Project = () => {
   //console.log(data)
   return (
     <Container>
+      {prevNext()}
       <Row>
         <Col lg={6}>
           <h1 className="tituloServico text-uppercase fw-bold">{projetos.data[0].attributes.Titulo}</h1>
           <div className="space-4" />
           <ReactMarkdown children={projetos.data[0].attributes.Descricao} />
           <div className="space-4" />
-
-          <Link to={`/portfolio/${nextSlug}`} className="next-service">Seguinte {'>'}</Link>
+            {next()}
         </Col>
         <Col lg={6}>
           <Row>
