@@ -25,12 +25,12 @@ const MyMenu = () => {
             </li>
             <li>
               <Link to={`/portfolio`}>
-                PORTFOLIO
+                PORTFóLIO
               </Link>
             </li>
             <li>
               <Link to={`/service/${data.servicos.data[0].attributes.Slug}`}>
-                SERVICOS
+                SERVIçOS
               </Link>
             </li>
             <li>

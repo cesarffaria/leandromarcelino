@@ -175,6 +175,27 @@ body,
     filter: invert(100%);
 }
 
+.Menu-list{
+    list-style-type: square;
+}
+
+.Menu-list li {
+    color:#fc9200;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.Menu-list li a{
+    text-decoration: none;
+    color:#fff;
+    text-transform: uppercase;
+}
+
+.Menu-list li a:hover{
+    text-decoration: none;
+    color:#fc9200;
+}
+
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
 }
@@ -254,26 +275,6 @@ a.next-service{
 }
 a.next-service:hover{
     color:#fc9200;
-}
-
-.Menu-list{
-    list-style-type: square;
-}
-
-.Menu-list li a{
-    text-decoration: none;
-    color:#fff;
-}
-
-.Menu-list li a:hover{
-    text-decoration: none;
-    color:#fc9200;
-}
-
-.Menu-list li {
-    color:#fc9200;
-    font-size: 3em;
-    font-weight: bold;
 }
 
 .lista-projetos{
