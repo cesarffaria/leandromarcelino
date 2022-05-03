@@ -82,11 +82,11 @@ const Service = () => {
       {prevNext()}
       <Row>
         <Col lg={6}>
-          <div className="d-flex gap-4">
+          <div className="d-flex gap-4 tituloServico">
             <img
               src={iconUrl}
             />
-            <h1 className="tituloServico text-uppercase fw-bold">{servicos.data[0].attributes.Nome}</h1>
+            <h1 className="text-uppercase fw-bold">{servicos.data[0].attributes.Nome}</h1>
           </div>
           <div className="space-4" />
           <ReactMarkdown children={servicos.data[0].attributes.Descricao} />
@@ -116,7 +116,7 @@ const Service = () => {
             </Button>
           </div>
         </Col>
-        <Col lg={6} className="d-flex justify-content-end">
+        <Col lg={6} className="d-flex justify-content-end nav-btn">
           <Link to={`/service/${nextSlug}`} className="next-service">Seguinte {'>'}</Link>
         </Col>
       </Row>

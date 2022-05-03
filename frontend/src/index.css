@@ -1,15 +1,29 @@
+:root {
+    --main-color: #fc9200;
+    --main-grey:hsla(0, 0%, 100%, 0.502);
+}
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-#TERASTUDIO-brand {
-    width: 100%;
-    max-width: 200px;
-}
 
 body {
     font-family: 'Oxanium', cursive, sans-serif;
+}
+
+a {
+    color: var(--main-color);
+}
+a:visited {
+    color: var(--main-grey);
+}
+
+a:hover,
+a:focus,
+a:active {
+    text-decoration: underline;
 }
 
 body,
@@ -106,6 +120,9 @@ body,
     color: white;
 }
 
+.nav-btn {
+    text-transform: uppercase;
+}
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -244,6 +261,11 @@ body,
 #footer-bottom #TERASTUDIO-brand {
     min-width: 170px;
 }
+
+#TERASTUDIO-brand {
+    width: 100%;
+    max-width: 200px;
+}
 /** -- end FOOTER -- **/
 
 /** -- HOMEPAGE -- **/
@@ -261,10 +283,15 @@ body,
 
 /** -- end HOMEPAGE -- **/
 
+/** -- SERVIÇOS -- **/
 .tituloServico{
     color:#fc9200;
+}
+
+.tituloServico h1 {
     font-size: 3em;
 }
+/** -- end SERVIÇOS -- **/
 
 .service-image{
     width: 100%;
@@ -306,7 +333,9 @@ img.portfolio-imagem-projeto img{
     text-decoration: unset;
 }
 
-@media screen and (max-width:679px) {.buttons-hp {
+@media screen and (max-width:679px) {
+    
+    .buttons-hp {
     flex-flow: column;
     width: 100%;
     margin-bottom:4rem;
@@ -316,6 +345,13 @@ img.portfolio-imagem-projeto img{
         width: 100%;
     }
     
+    /** -- SERVIÇOS -- **/
+    .tituloServico{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+    /** -- end SERVIÇOS -- **/
 }
 @media screen and (min-width:680px) {
 
