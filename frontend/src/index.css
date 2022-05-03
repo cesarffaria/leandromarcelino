@@ -13,6 +13,12 @@ body {
     font-family: 'Oxanium', cursive, sans-serif;
 }
 
+h1 {
+    font-weight: bold;
+    font-size: 2.875em;
+    color: var(--main-color);
+}
+
 a {
     color: var(--main-color);
 }
@@ -332,6 +338,7 @@ a.next-service:hover{
 .lista-projetos{
     list-style: none;
     padding: 0;
+    margin-bottom: 2rem;
 }
 
 .lista-projetos li button{
@@ -339,10 +346,11 @@ a.next-service:hover{
     border: 0px;
     border-bottom: 1px solid white;
     color:white;
-    padding: 10px;
+    padding: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    text-align: left;
 }
 
 .lista-projetos li.active{
@@ -359,6 +367,10 @@ img.portfolio-imagem-projeto img{
 }
 
 @media screen and (max-width:679px) {
+
+    h1 {
+        text-align: center;
+    }
     
     .buttons-hp {
     flex-flow: column;
