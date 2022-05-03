@@ -27,7 +27,7 @@ const Projectos = () => {
     <Container>
       <Row>
         <Col lg={4}>
-          <h1>Lorem</h1>
+          <h1>Portfólio</h1>
           <ul className="lista-projetos">
             {data.servicos.data.map((servico,index) => {
               return (

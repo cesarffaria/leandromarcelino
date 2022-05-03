@@ -51,7 +51,7 @@ const Homepage = () => {
           </div>
         </Col>
         <Col lg={6}>
-          <Row classname="teste">
+          <Row>
             {homepageAttributes.Colunas.map((coluna, index) => (
               <Col key={index} lg={4}>
                 <h3>{coluna.Titulo}</h3>
