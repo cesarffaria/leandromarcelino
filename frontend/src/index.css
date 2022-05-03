@@ -1,9 +1,10 @@
 #TERASTUDIO-brand {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
 }
 
 body {
-    font-family: 'Oxanium', cursive;
+    font-family: 'Oxanium', cursive, sans-serif;
 }
 
 body,
@@ -11,16 +12,13 @@ body,
 .App {
     height: 100vh;
     max-height: 100vh;
+    background-color: black;
     color: white;
 }
 
 #mainContentCol {
     border-left: 1px solid white;
     border-right: 1px solid white;
-}
-
-#header {
-    padding: 30px 0;
 }
 
 /* side bars */
@@ -103,18 +101,6 @@ body,
     color: white;
 }
 
-@media only screen and (min-height:750px) {
-    .space-4 {
-        height: 5em;
-    }
-}
-
-@media only screen and (max-width:1000px) {
-    .space-4 {
-        height: 2em !important;
-    }
-}
-
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -136,14 +122,35 @@ body,
     margin-top: 8px;
 }
 
+/** -- HEADER -- **/
+.header-mobile {
+    gap:1rem;
+    border-bottom:1px solid white;
+    justify-content: space-between;
+}
+.header-mobile.w-100{
+    width: calc(100% + var(--bs-gutter-x)) !important;
+    position: relative;
+    right: calc(var(--bs-gutter-x) / 2);
+}
+.header-mobile .navbar-brand {
+    margin-left: calc(var(--bs-gutter-x) * .5);
+}
+
+.header-mobile .navbar-brand img {
+    width: 100%;
+    max-width: 260px;
+    margin: .4rem 0;
+}
 .burger{
     background: #fc9200;
-    height: 100%;
     width: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin:0 calc(var(--bs-gutter-x) * -.5);
 }
+
 .burger img{
     color: unset;
     background: unset;
@@ -158,15 +165,6 @@ body,
     filter: invert(100%);
 }
 
-.tituloServico{
-    color:#fc9200;
-    font-size: 3em;
-}
-
-.service-image{
-    width: 100%;
-}
-
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
 }
@@ -175,17 +173,29 @@ body,
 .navbar-dark .navbar-nav .nav-link.active {
     color: #fc9200;
 }
+
+.navbar-expand .navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+}
+
+/** -- end HEADER -- **/
+
+
+.tituloServico{
+    color:#fc9200;
+    font-size: 3em;
+}
+
+.service-image{
+    width: 100%;
+}
 a.next-service{
     color:white;
     text-decoration: none;
 }
 a.next-service:hover{
     color:#fc9200;
-}
-
-.navbar-expand .navbar-nav {
-    width: 100%;
-    justify-content: space-around;
 }
 
 .Menu-list{
@@ -237,5 +247,22 @@ img.portfolio-imagem-projeto img{
     text-decoration: unset;
 }
 
-.portfolio-titulo-projeto{
+@media screen and (min-width:680px) {
+
+    #header {
+        padding: 30px 0;
+    }
+    
+}
+
+@media only screen and (min-height:750px) {
+    .space-4 {
+        height: 5em;
+    }
+}
+
+@media only screen and (max-width:1000px) {
+    .space-4 {
+        height: 2em !important;
+    }
 }
