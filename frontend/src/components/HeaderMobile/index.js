@@ -40,7 +40,6 @@ const Header = () => {
           </Link>
         </div>
       </div>
-      <Navigation name={headerNome} url={headerLogoURL} />
     </div>
   );
 };
