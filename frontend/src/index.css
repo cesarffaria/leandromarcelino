@@ -161,6 +161,7 @@ body,
     gap:1rem;
     border-bottom:1px solid white;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 .header-mobile .navbar-brand {
     margin-left: calc(var(--bs-gutter-x) * .5);

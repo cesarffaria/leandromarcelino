@@ -40,7 +40,7 @@ const Projectos = () => {
             })}
           </ul>
         </Col>
-        <Col lg={8}>
+        <Col lg={8} className="project-grid">
           <Query query={PROJECTS_QUERY} slug={slug}>
             {({ data: { servicos } }) => (
               <Row >
