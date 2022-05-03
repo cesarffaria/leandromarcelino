@@ -23,24 +23,24 @@ const Contactos = () => {
 
   return (
     <div id="body" className="body">
-      <Container>
+      <Container className="contact-block">
         <Row >
           <Col lg={6}>
             <h1>CONTACTOS</h1>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d684.1098957425851!2d-8.723840643864307!3d39.65985795374832!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd227623ca8344f7%3A0x174079d8958563f7!2s2495-016!5e0!3m2!1spt-PT!2spt!4v1650727527160!5m2!1spt-PT!2spt" width="100%" height="600" allowFullScreen="" referrerPolicy="no-referrer-when-downgrade"></iframe>
-            <ul>
-              <li>
+            <ul className="contact-list">
+              <li className="morada">
                 Rua Senhora do Monte, Nº30, Casal dos Lobos 2495-016 São Mamede
               </li>
-              <li>
+              <li className="email">
                 <a href="mailto:geral@leandromarcelino.pt">geral@leandromarcelino.pt</a>
               </li>
-              <li>
+              <li className="tlml">
                 <a href="tel:+351969795742">(+351) 969 795 742</a>
               </li>
             </ul>
           </Col>
-          <Col lg={6}>
+          <Col lg={6} className="contact-form">
             <h1 className="alt-h1">PEÇA UM ORÇAMENTO</h1>
             <form>
               <div className="d-flex">
@@ -51,7 +51,7 @@ const Contactos = () => {
               <div className="d-flex">
                 <textarea type="text" name="mensagem" placeholder="Mensagem" />
               </div>
-              <input type="checkbox" name="rgpd" /><label for="rgpd">Concordo com a política de privacidade deste site</label>
+              <div className="rgdp-block"><input type="checkbox" name="rgpd" /><label for="rgpd">Concordo com a política de privacidade deste site</label></div>
               <div className="d-flex">
                 <input type="submit" value="Enviar" />
               </div>

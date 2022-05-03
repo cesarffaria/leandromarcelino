@@ -1,5 +1,5 @@
 :root {
-    --main-color: #fc9200;
+    --main-color: hsl(35, 100%, 49%);
     --main-grey:hsla(0, 0%, 100%, 0.502);
 }
 
@@ -20,6 +20,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.alt-h1 {
+    color: white;
+}
+
 a {
     color: var(--main-color);
 }
@@ -37,6 +41,61 @@ img {
     height: auto;
 }
 
+form input,
+form textarea {
+    background: none;
+    color: white;
+}
+
+form input:not([type="submit"]),
+form textarea {
+    border: 0;
+    border-bottom: 1px solid white;
+    padding:1rem 0;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    max-width: fit-content;
+    display: inline-block;
+}
+
+input[type="submit"] {
+    border: 1px solid white;
+    padding:1rem;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:visited {
+    background: hsla(35, 100%, 49%, 0.2);
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background: hsla(35, 100%, 49%, 0.5);
+}
+
+
+input[type="submit"]:active {
+    background: var(--main-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: white;
+}
+
+input + input,
+input + textarea,
+textarea + input {
+    margin-top:1rem;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 1px solid var(--main-color);
+    padding:1rem;
+}
 .next-service {
     text-transform: uppercase;
 }
@@ -371,6 +430,70 @@ body,
 }
 /** -- end PORTFÓLIO -- **/
 
+/** -- CONTACTOS -- **/
+.contact-block iframe {
+    max-height: 175px;
+}
+
+.contact-list {
+    max-width: calc(65% + 2rem);
+    margin: 2rem auto;
+    padding-right: 1rem;
+    list-style: none;
+    position: relative;
+}
+
+.contact-list li + li{
+    margin-top: 1rem;
+}
+
+.contact-list li::before {
+    color: var(--main-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    transform: translateX(calc(-100% - 1rem));
+
+}
+
+.contact-list li.morada::before {
+    content:'m';
+}
+
+.contact-list li.email::before {
+    content:'e';
+}
+
+.contact-list li.tlml::before {
+    content:'t';
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+.contact-block form .rgdp-block {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap:1rem;
+    font-size: 80%;
+}
+
+.contact-block form .rgdp-block input {
+    margin-top: .2rem;
+}
+
+.contact-block textarea {
+    width: 100%;
+}
+
+/** -- end CONTACTOS -- **/
+
 .service-image{
     width: 100%;
 }
@@ -436,6 +559,12 @@ img.portfolio-imagem-projeto img{
         text-align: center;
     }
     /** -- end SERVIÇOS -- **/
+
+    /** -- CONTACTOS -- **/
+    .contact-block form > div {
+        flex-flow: column;
+    }
+    /** -- end CONTACTOS -- **/
 }
 @media screen and (min-width:680px) {
 
@@ -457,6 +586,14 @@ img.portfolio-imagem-projeto img{
     .project-grid > div > div img {
         max-height: 222px;
     }
+    /** -- CONTACTOS -- **/
+    
+    .contact-block iframe {
+        max-height: 300px;
+    }
+
+
+    /** -- end CONTACTOS -- **/
     
 }
 
