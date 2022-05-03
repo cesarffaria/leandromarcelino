@@ -278,12 +278,37 @@ body,
     margin-bottom: 2rem;
     display: inline-block;
 }
-
-
-
 /** -- end HOMEPAGE -- **/
 
 /** -- SERVIÇOS -- **/
+.top-service-nav {
+    margin-bottom: 4rem;
+}
+.nav-ttl,
+.nav-ttl a.next-service {
+    font-weight: bold;
+    color: var(--main-color);
+    font-size: 1.250em;
+}
+
+.nav-ttl {
+    gap: 1rem;
+}
+
+.nav-ttl p {
+    text-align: center;
+}
+
+.top-service-nav .dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+.top-service-nav .dot.active {
+    background-color: var(--main-color);
+}
+
 .tituloServico{
     color:#fc9200;
 }

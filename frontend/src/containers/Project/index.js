@@ -52,8 +52,8 @@ const Project = () => {
   const prevNext = () => {
     if (isMobile) {
       return (
-      <Row>
-        <div className="d-flex justify-content-around">
+      <Row className="top-service-nav">
+        <div className="d-flex justify-content-between nav-ttl">
           <Link to={`/portfolio/${prevSlug}`} className="next-service">{'<'}</Link>
           <p>
             {projetos.data[0].attributes.Titulo}
