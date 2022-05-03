@@ -17,6 +17,7 @@ h1 {
     font-weight: bold;
     font-size: 2.875em;
     color: var(--main-color);
+    text-transform: uppercase;
 }
 
 a {
@@ -32,6 +33,13 @@ a:active {
     text-decoration: underline;
 }
 
+img {
+    height: auto;
+}
+
+.next-service {
+    text-transform: uppercase;
+}
 body,
 #root,
 .App {
@@ -39,8 +47,11 @@ body,
     max-height: 100vh;
     background-color: black;
     color: white;
+    overflow-x: hidden;
 }
-
+.container {
+    max-width: 1500px;
+}
 #mainContentCol {
     border-left: 1px solid white;
     border-right: 1px solid white;
@@ -325,6 +336,41 @@ body,
 }
 /** -- end SERVIÇOS -- **/
 
+/** -- PORTFÓLIO -- **/
+.intro-projetos {
+    width: 100%;
+}
+
+.project-grid {
+    width: 100%;
+    max-width: 900px;
+}
+.project-grid > div {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 1rem;
+    row-gap: 2rem;
+    max-width: 100%;
+}
+.project-grid > div > div {
+    padding: 0;
+    width: 100%;
+}
+.project-grid > div > div a {
+    display: block;
+    overflow: hidden;
+}
+.project-grid > div > div img {
+    min-height: 180px;
+    max-height: calc(50vw - 2rem);
+    width: auto;
+}
+
+.project-grid .portfolio-titulo-projeto {
+    margin:1rem 0 0 0;
+}
+/** -- end PORTFÓLIO -- **/
+
 .service-image{
     width: 100%;
 }
@@ -395,6 +441,21 @@ img.portfolio-imagem-projeto img{
 
     #header {
         padding: 30px 0;
+    }
+    .project-block {
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+    .intro-projetos {
+        max-width: 400px;
+    }
+    .project-grid > div {
+        grid-template-columns: repeat(4, 25%);
+        width: 100%;
+    }
+
+    .project-grid > div > div img {
+        max-height: 222px;
     }
     
 }

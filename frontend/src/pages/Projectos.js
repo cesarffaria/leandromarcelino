@@ -25,8 +25,8 @@ const Projectos = () => {
   
   return (
     <Container>
-      <Row>
-        <Col lg={4}>
+      <Row className="project-block">
+        <Col lg={4} className="intro-projetos">
           <h1>Portfólio</h1>
           <ul className="lista-projetos">
             {data.servicos.data.map((servico,index) => {
