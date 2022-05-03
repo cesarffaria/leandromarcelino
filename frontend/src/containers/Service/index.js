@@ -78,7 +78,7 @@ const Service = () => {
   }
 
   return (
-    <Container>
+    <Container className="servicos-block">
       {prevNext()}
       <Row>
         <Col lg={6}>
