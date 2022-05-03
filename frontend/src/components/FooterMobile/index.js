@@ -28,8 +28,8 @@ const Footer = () => {
           <Row>
             <p>94627 - PUB</p>
             <p>f in</p>
-            <div className="text-start">© {new Date().getFullYear()} {headerNome} - Todos os direitos reservados.</div>
-            <div className="text-end">Powered by <a href="https://terastudio.pt/" target="_blank" alt="TERASTUDIO"><img id="TERASTUDIO-brand" src={logoWhite} alt="TERASTUDIO"></img></a></div>
+            <div>© {new Date().getFullYear()} {headerNome} - Todos os direitos reservados.</div>
+            <div>Powered by <a href="https://terastudio.pt/" target="_blank" alt="TERASTUDIO"><img id="TERASTUDIO-brand" src={logoWhite} alt="TERASTUDIO"></img></a></div>
           </Row>
         </Container>
       </div>

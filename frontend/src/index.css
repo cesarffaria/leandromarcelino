@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
 #TERASTUDIO-brand {
     width: 100%;
     max-width: 200px;
@@ -121,17 +126,18 @@ body,
     content: '';
     margin-top: 8px;
 }
+.header-mobile.w-100,
+#footer-bottom {
+    width: calc(100% + var(--bs-gutter-x)) !important;
+    position: relative;
+    right: calc(var(--bs-gutter-x) / 2);
+}
 
 /** -- HEADER -- **/
 .header-mobile {
     gap:1rem;
     border-bottom:1px solid white;
     justify-content: space-between;
-}
-.header-mobile.w-100{
-    width: calc(100% + var(--bs-gutter-x)) !important;
-    position: relative;
-    right: calc(var(--bs-gutter-x) / 2);
 }
 .header-mobile .navbar-brand {
     margin-left: calc(var(--bs-gutter-x) * .5);
@@ -155,6 +161,10 @@ body,
     color: unset;
     background: unset;
     border:unset;
+}
+
+.burger-desktop {
+    height: 100%;
 }
 
 .burger-desktop img{
@@ -181,6 +191,54 @@ body,
 
 /** -- end HEADER -- **/
 
+/** -- FOOTER -- **/
+
+#footer-bottom {
+    border-top:1px solid white;
+    background: black;
+    text-align: center;
+}
+
+#footer-bottom .container {
+    padding: 2rem;
+
+}
+#footer-bottom .container > .row {
+    justify-content: center;
+    gap: 2rem;
+}
+#footer-bottom .container > .row > p {
+    margin:0;
+    color: #fc9200;
+}
+
+#footer-bottom .container > div > div:last-of-type{
+    text-align: left;
+    width: auto;
+}
+#footer-bottom div > a {
+    display: block;
+}
+
+#footer-bottom #TERASTUDIO-brand {
+    min-width: 170px;
+}
+/** -- end FOOTER -- **/
+
+/** -- HOMEPAGE -- **/
+.body {
+    padding-top:4rem;
+    padding-bottom:4rem;
+}
+.contacto-telefonico-hp {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: inline-block;
+}
+
+
+
+/** -- end HOMEPAGE -- **/
 
 .tituloServico{
     color:#fc9200;
@@ -247,6 +305,17 @@ img.portfolio-imagem-projeto img{
     text-decoration: unset;
 }
 
+@media screen and (max-width:679px) {.buttons-hp {
+    flex-flow: column;
+    width: 100%;
+    margin-bottom:4rem;
+    }
+
+    .buttons-hp button {
+        width: 100%;
+    }
+    
+}
 @media screen and (min-width:680px) {
 
     #header {

@@ -50,16 +50,23 @@ function App() {
       );
     }
   }
+  const background = () => {
+    if (!isMobile) {
+      return (
+        { backgroundImage: `url(${background2x})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor: "black" }
+        
+      );
+    }
+  }
   return (
     <div className="App" >
-      <Container fluid style={{ backgroundImage: `url(${background2x})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: "no-repeat", backgroundColor: "black" }} >
+      <Container fluid style={background()} >
         <Row>
           {left()}
           <Col lg={isMobile ? 12 : 10} id="mainContentCol">
             {!isMobile ? <Header /> : <HeaderMobile />}
             <div id="body" className="body">
               {/*<Slide sliderData={homepageAttributes.Slider.data} sliderName="carouselExampleIndicators"></Slide>*/}
-              <div className="space-4" />
               <Routes>
                 <Route path="/" element={<Homepage />} exact />
                 <Route path="/servicos" element={<Servicos />} exact />
