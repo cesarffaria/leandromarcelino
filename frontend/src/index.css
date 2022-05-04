@@ -348,6 +348,26 @@ body,
     justify-content: center;
 }
 
+#header .social-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.social-list a {
+color: #fc9200;
+}
+
+.social-list a:hover {
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+
 #TERASTUDIO-brand {
     width: 100%;
     min-width: 170px;

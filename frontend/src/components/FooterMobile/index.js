@@ -27,9 +27,8 @@ const Footer = () => {
         <Container>
           <Row>
             <p>94627 - PUB</p>
-            <Row><ul className="social-list">
-            <li><a href="www.facebook.com">f</a></li><li><a href="www.linkedin.com">in</a></li>
-              </ul>  </Row>
+            <Row>          <ul className="social-list"><li><a href="https://www.facebook.com/LM-Instala%C3%A7%C3%B5es-Eletricas-110138071688000" target="_blank">f</a></li><li><a href="https://www.linkedin.com/company/lm-instala%C3%A7%C3%B5es-el%C3%A9tricas/" target="_blank">in</a></li></ul>
+  </Row>
             <div>© {new Date().getFullYear()} {headerNome} - Todos os direitos reservados.</div>
             <div>Powered by <a href="https://terastudio.pt/" target="_blank" alt="TERASTUDIO"><img id="TERASTUDIO-brand" src={logoWhite} alt="TERASTUDIO"></img></a></div>
           </Row>

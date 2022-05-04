@@ -51,7 +51,7 @@ const Contactos = () => {
               <div className="d-flex">
                 <textarea type="text" name="mensagem" placeholder="Mensagem" />
               </div>
-              <div className="rgdp-block"><input type="checkbox" name="rgpd" /><label for="rgpd">Concordo com a política de privacidade deste site</label></div>
+              <div className="rgdp-block"><input type="checkbox" name="rgpd" /><label htmlFor="rgpd">Concordo com a política de privacidade deste site</label></div>
               <div className="d-flex">
                 <input type="submit" value="Enviar" />
               </div>

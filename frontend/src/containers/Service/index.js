@@ -108,12 +108,12 @@ const Service = () => {
       <Row>
         <Col lg={6} className="d-flex align-items-center">
           <div className="buttons-hp d-flex  gap-3">
-            <Button variant="primary" onClick={() => console.log("Primary")}>
+            <Link to={`/contactos`}><Button variant="primary" onClick={() => console.log()}>
               AGENDE MARCAÇÃO
-            </Button>
-            <Button variant="primary" onClick={() => console.log("Primary")}>
+            </Button></Link>
+            <Link to={`/contactos`}><Button variant="primary" onClick={() => console.log()}>
               PEDIR ORÇAMENTO
-            </Button>
+            </Button></Link>
           </div>
         </Col>
         <Col lg={6} className="d-flex justify-content-end nav-btn">

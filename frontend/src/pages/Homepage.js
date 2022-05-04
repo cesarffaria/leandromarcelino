@@ -3,6 +3,7 @@ import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
 import Moment from "react-moment";
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 import Slide from "../bootstrap/Slide";
 
@@ -42,12 +43,12 @@ const Homepage = () => {
       <Row>
         <Col lg={6} className="d-flex align-items-center">
           <div className="buttons-hp d-flex  gap-3">
-            <Button variant="primary" onClick={() => console.log("Primary")}>
+          <Link to={`/contactos`}><Button variant="primary" onClick={() => console.log("Primary")}>
               AGENDE MARCAÇÃO
-            </Button>
-            <Button variant="primary" onClick={() => console.log("Primary")}>
+            </Button></Link>
+            <Link to={`/contactos`}><Button variant="primary" onClick={() => console.log("Primary")}>
               PEDIR ORÇAMENTO
-            </Button>
+            </Button></Link>
           </div>
         </Col>
         <Col lg={6}>
