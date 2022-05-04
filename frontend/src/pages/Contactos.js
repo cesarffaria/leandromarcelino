@@ -41,14 +41,7 @@ const Contactos = () => {
       element.innerHTML = data.total;
     })()
   }
-  /*const mySubmit = () => ((async () => {
-    // GET request using fetch with async/await
-    const element = document.querySelector('#get-request-async-await .total');
-    const response = await fetch(`https://leandromarcelino.pt/PHPMailer/example.php/?nome=asd`);
-    const data = await response.json();
-    element.innerHTML = data.total;
-  })());*/
-
+  
   return (
     <div id="body" className="body">
       <Container className="contact-block">
