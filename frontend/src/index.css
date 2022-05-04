@@ -341,6 +341,13 @@ body,
     display: block;
 }
 
+#footer-bottom .social-list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
 #TERASTUDIO-brand {
     width: 100%;
     min-width: 170px;
