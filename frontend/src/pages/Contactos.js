@@ -65,14 +65,14 @@ const Contactos = () => {
             <h1 className="alt-h1">PEÇA UM ORÇAMENTO</h1>
             <form onSubmit={handleSubmit}>
               <div className="d-flex">
-                <input onChange={(e) => setFormData({...formData, nome: e.target.value})} value={formData.nome} type="text" name="nome" placeholder="Nome" />
-                <input onChange={(e) => setFormData({...formData, apelido: e.target.value})} value={formData.apelido} type="text" name="apelido" placeholder="Apelido" />
-                <input onChange={(e) => setFormData({...formData, email: e.target.value})} value={formData.email} type="text" name="email" placeholder="E-mail" />
+                <input onChange={(e) => setFormData({...formData, nome: e.target.value})} value={formData.nome} type="text" name="nome" placeholder="Nome" required />
+                <input onChange={(e) => setFormData({...formData, apelido: e.target.value})} value={formData.apelido} type="text" name="apelido" placeholder="Apelido" required />
+                <input onChange={(e) => setFormData({...formData, email: e.target.value})} value={formData.email} type="text" name="email" placeholder="E-mail" required />
               </div>
               <div className="d-flex">
-                <textarea onChange={(e) => setFormData({...formData, mensagem: e.target.value})} value={formData.mensagem} type="text" name="mensagem" placeholder="Mensagem" />
+                <textarea onChange={(e) => setFormData({...formData, mensagem: e.target.value})} value={formData.mensagem} type="text" name="mensagem" placeholder="Mensagem" required/>
               </div>
-              <div className="rgdp-block"><input type="checkbox" name="rgpd" /><label htmlFor="rgpd">Concordo com a política de privacidade deste site</label></div>
+              <div className="rgdp-block"><input type="checkbox" name="rgpd" required /><label htmlFor="rgpd">Concordo com a política de privacidade deste site</label></div>
               <div className="d-flex">
                 <input type="submit" value="Enviar" />
               </div>
