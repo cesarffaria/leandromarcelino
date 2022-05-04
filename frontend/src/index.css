@@ -231,9 +231,17 @@ body,
 /** -- HEADER -- **/
 .header,
 .rigthBar > div.sideInner {
+    z-index: 1;
+}
+.header {
     position: relative;
     z-index: 1;
 }
+
+.rigthBar > div.sideInner {
+    position: fixed;
+}
+
 .header-mobile {
     gap:1rem;
     border-bottom:1px solid white;
