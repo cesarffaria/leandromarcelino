@@ -409,14 +409,15 @@ a{
 /** -- end HOMEPAGE -- **/
 
 /** -- SERVIÇOS -- **/
-.servicos-block::after{
+/*.servicos-block::after{
     content: url(assets/leandro.svg);
     position: fixed;
     bottom: 0;
     width: 83.33333333%;
     max-width: 1500px;
     transform: translateY(50%);
-}
+}*/
+
 .top-service-nav {
     margin-bottom: 4rem;
 }
