@@ -316,6 +316,10 @@ body,
     color: #fc9200;
 }
 
+.navbar-dark .navbar-nav .nav-link.active {
+    font-weight: bold;
+}
+
 .navbar-expand .navbar-nav {
     width: 100%;
     justify-content: space-around;
