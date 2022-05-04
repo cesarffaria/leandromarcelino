@@ -7,6 +7,8 @@ import FOOTER_QUERY from "../../queries/footer/footer.js";
 
 import logoBlack from "../../assets/logo_black.svg";
 import logoWhite from "../../assets/logo_white.svg";
+import logoF from "../../assets/facebook-f.svg";
+import logoIN from "../../assets/linkedin-in.svg";
 
 const Footer = () => {
   const { loading, error, data } = useQuery(FOOTER_QUERY)
@@ -27,7 +29,7 @@ const Footer = () => {
         <Container>
           <Row>
             <p>94627 - PUB</p>
-            <Row>          <ul className="social-list"><li><a href="https://www.facebook.com/LM-Instala%C3%A7%C3%B5es-Eletricas-110138071688000" target="_blank">f</a></li><li><a href="https://www.linkedin.com/company/lm-instala%C3%A7%C3%B5es-el%C3%A9tricas/" target="_blank">in</a></li></ul>
+            <Row>          <ul className="social-list"><li><a href="https://www.facebook.com/LM-Instala%C3%A7%C3%B5es-Eletricas-110138071688000" target="_blank"><img src={logoF} alt="F" width="10" height="18"/></a></li><li><a href="https://www.linkedin.com/company/lm-instala%C3%A7%C3%B5es-el%C3%A9tricas/" target="_blank"><img src={logoIN} alt="in" width="20" height="20"/></a></li></ul>
   </Row>
             <div>© {new Date().getFullYear()} {headerNome} - Todos os direitos reservados.</div>
             <div>Powered by <a href="https://terastudio.pt/" target="_blank" alt="TERASTUDIO"><img id="TERASTUDIO-brand" src={logoWhite} alt="TERASTUDIO"></img></a></div>
