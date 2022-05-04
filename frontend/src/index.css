@@ -24,8 +24,9 @@ h1 {
     color: white;
 }
 
-a {
-    color: var(--main-color);
+a:link {
+    color:white;
+    text-decoration: underline;
 }
 a:visited {
     color: var(--main-grey);
@@ -34,7 +35,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-    text-decoration: underline;
+    color: var(--main-color);
 }
 
 img {
@@ -298,6 +299,7 @@ body,
 
 .navbar-dark .navbar-nav .nav-link {
     color: #fff;
+    text-decoration: none;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -380,10 +382,21 @@ a{
     padding-top:4rem;
     padding-bottom:4rem;
 }
-.contacto-telefonico-hp {
+.contacto-telefonico-hp:link {
     font-weight: bold;
     margin-bottom: 2rem;
     display: inline-block;
+    color: var(--main-color);
+    text-decoration: none;
+}
+.contacto-telefonico-hp:visited {
+    color: var(--main-grey);
+}
+.contacto-telefonico-hp:hover,
+.contacto-telefonico-hp:focus,
+.contacto-telefonico-hp:active {
+    color: white;
+    text-decoration: underline;
 }
 /** -- end HOMEPAGE -- **/
 
@@ -436,6 +449,33 @@ a{
 /** -- PORTFÓLIO -- **/
 .intro-projetos {
     width: 100%;
+}
+
+.lista-projetos{
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.lista-projetos li button{
+    background-color: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    color:white;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.lista-projetos li:hover{
+    background-color: hsla(35, 100%, 49%, 0.5);
+}
+
+.lista-projetos li.active,
+.lista-projetos li:active{
+    background-color: #fc9200;
 }
 
 .project-grid {
@@ -545,27 +585,7 @@ a.next-service:hover{
     color:#fc9200;
 }
 
-.lista-projetos{
-    list-style: none;
-    padding: 0;
-    margin-bottom: 2rem;
-}
 
-.lista-projetos li button{
-    background-color: transparent;
-    border: 0px;
-    border-bottom: 1px solid white;
-    color:white;
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    text-align: left;
-}
-
-.lista-projetos li.active{
-    background-color: #fc9200;
-}
 
 img.portfolio-imagem-projeto img{
     object-fit: cover;
