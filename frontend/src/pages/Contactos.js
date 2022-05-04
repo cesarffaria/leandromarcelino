@@ -13,6 +13,14 @@ import Slide from "../bootstrap/ReactSlide";
 import HOMEPAGE_QUERY from "../queries/homepage/homepage";
 
 const Contactos = () => {
+  const [formData, setFormData] = useState({
+    nome: "",
+    apelido: "",
+    email: "",
+    mensagem: ""
+  })
+
+  
   const { loading, error, data } = useQuery(HOMEPAGE_QUERY)
 
   if (loading) return <p>Loading...</p>
@@ -20,6 +28,26 @@ const Contactos = () => {
 
   const homepageData = data.homepage.data;
   const homepageAttributes = homepageData.attributes;
+
+
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    (async () => {
+      // GET request using fetch with async/await
+      const element = document.querySelector('#get-request-async-await .total');
+      const response = await fetch(`https://leandromarcelino.pt/PHPMailer/example.php/?nome=${formData.nome}&apelido=${formData.apelido}&email=${formData.email}&mensagem=${formData.mensagem}`);
+      const data = await response.json();
+      element.innerHTML = data.total;
+    })()
+  }
+  /*const mySubmit = () => ((async () => {
+    // GET request using fetch with async/await
+    const element = document.querySelector('#get-request-async-await .total');
+    const response = await fetch(`https://leandromarcelino.pt/PHPMailer/example.php/?nome=asd`);
+    const data = await response.json();
+    element.innerHTML = data.total;
+  })());*/
 
   return (
     <div id="body" className="body">
@@ -42,14 +70,14 @@ const Contactos = () => {
           </Col>
           <Col lg={6} className="contact-form">
             <h1 className="alt-h1">PEÇA UM ORÇAMENTO</h1>
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="d-flex">
-                <input type="text" name="nome" placeholder="Nome" />
-                <input type="text" name="apelido" placeholder="Apelido" />
-                <input type="text" name="email" placeholder="E-mail" />
+                <input onChange={(e) => setFormData({...formData, nome: e.target.value})} value={formData.nome} type="text" name="nome" placeholder="Nome" />
+                <input onChange={(e) => setFormData({...formData, apelido: e.target.value})} value={formData.apelido} type="text" name="apelido" placeholder="Apelido" />
+                <input onChange={(e) => setFormData({...formData, email: e.target.value})} value={formData.email} type="text" name="email" placeholder="E-mail" />
               </div>
               <div className="d-flex">
-                <textarea type="text" name="mensagem" placeholder="Mensagem" />
+                <textarea onChange={(e) => setFormData({...formData, mensagem: e.target.value})} value={formData.mensagem} type="text" name="mensagem" placeholder="Mensagem" />
               </div>
               <div className="rgdp-block"><input type="checkbox" name="rgpd" /><label htmlFor="rgpd">Concordo com a política de privacidade deste site</label></div>
               <div className="d-flex">
