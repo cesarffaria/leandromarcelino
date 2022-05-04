@@ -418,6 +418,22 @@ a{
     transform: translateY(50%);
 }*/
 
+.servicos-block::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 76.666666%;
+    max-width: 100%;
+    height: 50%;
+    max-height: 50px;
+    z-index: 0;
+    background-image: url(assets/leandro-2.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 0;
+}
+
 .top-service-nav {
     margin-bottom: 4rem;
 }
