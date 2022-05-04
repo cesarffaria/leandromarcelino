@@ -600,6 +600,12 @@ img.portfolio-imagem-projeto img{
     }
     /** -- end SERVIÇOS -- **/
 
+    /** -- PROJECTOS -- **/
+    .portfolio-gallery > .row {
+        gap:1rem;
+    }
+    /** -- end PROJECTOS -- **/
+
     /** -- CONTACTOS -- **/
     .contact-block form > div {
         flex-flow: column;

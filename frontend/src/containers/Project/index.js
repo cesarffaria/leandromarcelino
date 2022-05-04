@@ -97,7 +97,7 @@ const Project = () => {
           <div className="space-4" />
             {next()}
         </Col>
-        <Col lg={6}>
+        <Col lg={6} className="portfolio-gallery">
           <Row>
             {projetos.data[0].attributes.Galeria.data.map((image, index) => (
               <Col key={index} lg={image.attributes.url == projetos.data[0].attributes.Galeria.data[0].attributes.url ? 8 : 4}>
