@@ -25,7 +25,7 @@ const Homepage = () => {
           <img
             alt={homepageAttributes.LEANDROMARCELINO.data.attributes.name}
             src={process.env.REACT_APP_BACKEND_URL + homepageAttributes.LEANDROMARCELINO.data.attributes.url}
-            className="d-inline-block align-top"
+            className="d-inline-block align-top img-lm"
             width={"80%"}
           />
           <div className="space-4"></div>

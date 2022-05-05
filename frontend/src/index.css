@@ -292,6 +292,7 @@ body,
 .Menu-list li {
     color:#fc9200;
     font-size: 3em;
+    font-size: clamp(38px, 100% + 1rem, 2.875em);
     font-weight: bold;
 }
 
@@ -644,6 +645,12 @@ img.portfolio-imagem-projeto img{
     .buttons-hp button {
         width: 100%;
     }
+
+    /** -- HOMEPAGE -- **/
+    .img-lm {
+        display: none !important;
+    }
+    /** -- end HOMEPAGE -- **/
     
     /** -- SERVIÇOS -- **/
     .tituloServico{
