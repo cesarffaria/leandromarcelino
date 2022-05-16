@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
 import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { isMobile } from 'react-device-detect';
 
@@ -21,21 +20,21 @@ const Service = () => {
     variables: { slug: slug }
   })
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
+  if (loading || landingR) return <p>Loading...</p>
+  if (error || errorR) return <p>Error :(</p>
 
   let nextSlug = "";
   let prevSlug = "";
   let currentIndex = 0;
   for (let i = 0; i < dataR.servicos.data.length + 0; i++) {
-    if (dataR.servicos.data[i].id == data.servicos.data[0].id) {
-      if (dataR.servicos.data.length != i + 1) {
+    if (dataR.servicos.data[i].id === data.servicos.data[0].id) {
+      if (dataR.servicos.data.length !== i + 1) {
         nextSlug = dataR.servicos.data[i + 1].attributes.Slug;
       }
       else {
         nextSlug = dataR.servicos.data[0].attributes.Slug;
       }
-      if (i - 1 == -1) {
+      if (i - 1 === -1) {
         prevSlug = dataR.servicos.data[dataR.servicos.data.length - 1].attributes.Slug;
       }
       else {
@@ -84,6 +83,7 @@ const Service = () => {
         <Col lg={6}>
           <div className="d-flex gap-4 tituloServico">
             <img
+            alt=""
               src={iconUrl}
             />
             <h1 className="text-uppercase fw-bold">{servicos.data[0].attributes.Nome}</h1>
@@ -98,6 +98,7 @@ const Service = () => {
         </Col>
         <Col lg={6}>
           <img
+          alt=""
             src={imageUrl}
             width="100%"
           />

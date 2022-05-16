@@ -1,16 +1,10 @@
 import React, { useState } from "react";
-import { useQuery } from "@apollo/react-hooks";
-import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 
 
 import { Container, Row, Col } from 'react-bootstrap';
 
 //import Slide from "../bootstrap/Slide";
 //import Slide from "../components/Slide";
-import Slide from "../bootstrap/ReactSlide";
-
-import HOMEPAGE_QUERY from "../queries/homepage/homepage";
 
 const Contactos = () => {
   const [formData, setFormData] = useState({
@@ -19,17 +13,6 @@ const Contactos = () => {
     email: "",
     mensagem: ""
   })
-
-  
-  const { loading, error, data } = useQuery(HOMEPAGE_QUERY)
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
-
-  const homepageData = data.homepage.data;
-  const homepageAttributes = homepageData.attributes;
-
-
 
   const handleSubmit = (e) => {
     e.preventDefault();

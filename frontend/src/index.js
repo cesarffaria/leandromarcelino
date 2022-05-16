@@ -7,7 +7,10 @@ import App from './containers/App';
 
 import client from "./utils/apolloClient";
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./index.css";
+
+
 
 // 👇️ IMPORTANT: use correct ID of your root element
 // this is the ID of the div in your index.html file

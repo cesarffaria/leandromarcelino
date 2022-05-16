@@ -787,3 +787,10 @@ img.portfolio-imagem-projeto img{
         padding-bottom: 0;
     }
 }
+
+
+figure.img-fix,
+figure.img-fix img{
+    width: 100% !important;
+    object-fit: cover;
+}

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useQuery } from "@apollo/react-hooks";
-import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 import { Link } from "react-router-dom";
 
 
@@ -21,7 +19,6 @@ const Projectos = () => {
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
 
-  //setSlug(data.servicos.data[0].attributes.Slug)
   
   return (
     <Container>
@@ -31,7 +28,7 @@ const Projectos = () => {
           <ul className="lista-projetos">
             {data.servicos.data.map((servico,index) => {
               return (
-                <li key={index +1} className={slug == servico.attributes.Slug  ? "active" : "" } >
+                <li key={index +1} className={slug === servico.attributes.Slug  ? "active" : "" } >
                   <button onClick={() => ( setSlug(servico.attributes.Slug, false)  )} >
                     {servico.attributes.Nome} <strong>{">"}</strong>
                   </button>
@@ -47,8 +44,8 @@ const Projectos = () => {
                 {servicos.data[0].attributes.projetos.data.map((projeto,index) => (
                   <Col lg={3} key={index}>
                     <Link to={`/portfolio/${projeto.attributes.Slug}`} key={projeto.attributes.Slug} className="portfolio-imagem-projeto">
-                      <Figure>
-                        <Figure.Image                          
+                      <Figure className="img-fix">
+                        <Figure.Image 
                           alt={projeto.attributes.Galeria.data[0].attributes.name}
                           src={process.env.REACT_APP_BACKEND_URL + projeto.attributes.Galeria.data[0].attributes.url}
                           width={"100%"}

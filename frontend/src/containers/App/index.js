@@ -16,10 +16,6 @@ import Service from "../Service";
 import Projecto from "../Project";
 import Projectos from "../../pages/Projectos";
 import Menu from "../../pages/MyMenu";
-//import Articles from "../Articles";
-//import Article from "../Article";
-//import Category from "../Category";
-import Footer from "../../components/Footer"
 import FooterMobile from "../../components/FooterMobile"
 
 
@@ -28,7 +24,6 @@ import FooterMobile from "../../components/FooterMobile"
 //<Route path="/article/:slug" element={<Article />} exact />
 //<Route path="/category/:slug" element={<Category />} exact />
 
-import background from "../../assets/background.jpg";
 import background2x from "../../assets/background_2x.jpg";
 
 function App() {
