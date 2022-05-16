@@ -526,12 +526,21 @@ a{
 }
 .project-grid > div > div a {
     display: block;
-    overflow: hidden;
+    height: 100%;
 }
-.project-grid > div > div img {
+.project-grid > div > div figure {
+    height: 100%;
     min-height: 180px;
     max-height: calc(50vw - 2rem);
     width: auto;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+.project-grid > div > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-bottom: 0;
 }
 
 .project-grid .portfolio-titulo-projeto {
@@ -688,12 +697,14 @@ img.portfolio-imagem-projeto img{
         max-width: 400px;
     }
     .project-grid > div {
-        grid-template-columns: repeat(4, 25%);
+        grid-template-columns: repeat(2, calc(25% - 1rem));
         width: 100%;
     }
 
-    .project-grid > div > div img {
+    .project-grid > div > div figure {
+        height: 100%;
         max-height: 222px;
+        overflow: hidden;
     }
     /** -- CONTACTOS -- **/
     .contact-block::before {
@@ -756,8 +767,18 @@ img.portfolio-imagem-projeto img{
     }
 }
 
+@media  screen and (min-width:1024px) {
+    .project-grid > div {
+        grid-template-columns: repeat(3, calc(25% - 1rem));
+    }
+    
+}
+
 /* fixes (cesar) after joana */
-@media only screen and (max-width:1400px) and (min-width: 1200px){
+@media only screen and (min-width: 1200px) and (max-width:1400px){
+    .project-grid > div {
+        grid-template-columns: repeat(4, 25%);
+    }
     .space-4 {
         height: 1em !important; 
     }

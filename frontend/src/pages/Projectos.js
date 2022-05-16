@@ -5,7 +5,7 @@ import Moment from "react-moment";
 import { Link } from "react-router-dom";
 
 
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Figure } from 'react-bootstrap';
 
 import SERVICOS_NOME_QUERY from "../queries/service/services_names";
 import PROJECTS_QUERY from "../queries/project/projects";
@@ -47,13 +47,14 @@ const Projectos = () => {
                 {servicos.data[0].attributes.projetos.data.map((projeto,index) => (
                   <Col lg={3} key={index}>
                     <Link to={`/portfolio/${projeto.attributes.Slug}`} key={projeto.attributes.Slug} className="portfolio-imagem-projeto">
-                      <img
-                        alt={projeto.attributes.Galeria.data[0].attributes.name}
-                        src={process.env.REACT_APP_BACKEND_URL + projeto.attributes.Galeria.data[0].attributes.url}
-                        width={"100%"}
-                        height={"200px"}
-                        
-                      />
+                      <Figure>
+                        <Figure.Image                          
+                          alt={projeto.attributes.Galeria.data[0].attributes.name}
+                          src={process.env.REACT_APP_BACKEND_URL + projeto.attributes.Galeria.data[0].attributes.url}
+                          width={"100%"}
+                          height={"200px"}
+                        />
+                      </Figure>
                       <h4 className="portfolio-titulo-projeto">{projeto.attributes.Titulo}</h4>
                     </Link>
                   </Col>
