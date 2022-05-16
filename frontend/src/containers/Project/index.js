@@ -1,15 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router";
 import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { isMobile } from 'react-device-detect';
 
 
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
-import Slide from "../../bootstrap/Slide";
 
 
 import PROJETO_SINGLE_QUERY from "../../queries/project/projectSingle";
@@ -24,21 +22,21 @@ const Project = () => {
     variables: { slug: slug }
   })
 
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error :(</p>
+  if (loading || landingR) return <p>Loading...</p>
+  if (error || errorR) return <p>Error :(</p>
 
   let nextSlug = "";
   let prevSlug = "";
   let currentIndex = 0;
   for (let i = 0; i < dataR.projetos.data.length + 0; i++) {
-    if (dataR.projetos.data[i].id == data.projetos.data[0].id) {
-      if (dataR.projetos.data.length != i + 1) {
+    if (dataR.projetos.data[i].id === data.projetos.data[0].id) {
+      if (dataR.projetos.data.length !== i + 1) {
         nextSlug = dataR.projetos.data[i + 1].attributes.Slug;
       }
       else {
         nextSlug = dataR.projetos.data[0].attributes.Slug;
       }
-      if (i - 1 == -1) {
+      if (i - 1 === -1) {
         prevSlug = dataR.projetos.data[dataR.projetos.data.length - 1].attributes.Slug;
       }
       else {
@@ -100,8 +98,9 @@ const Project = () => {
         <Col lg={6} className="portfolio-gallery">
           <Row>
             {projetos.data[0].attributes.Galeria.data.map((image, index) => (
-              <Col key={index} lg={image.attributes.url == projetos.data[0].attributes.Galeria.data[0].attributes.url ? 8 : 4}>
+              <Col key={index} lg={image.attributes.url === projetos.data[0].attributes.Galeria.data[0].attributes.url ? 8 : 4}>
                 <img width={"100%"}
+                alt=""
                   src={process.env.REACT_APP_BACKEND_URL + image.attributes.url}
                 />
               </Col>

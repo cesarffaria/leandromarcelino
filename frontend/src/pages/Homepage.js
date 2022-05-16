@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import ReactMarkdown from "react-markdown";
-import Moment from "react-moment";
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
