@@ -543,6 +543,10 @@ a{
     margin-bottom: 0;
 }
 
+.portfolio-imagem-projeto:link {
+    text-decoration: none;
+}
+
 .project-grid .portfolio-titulo-projeto {
     margin:1rem 0 0 0;
 }
