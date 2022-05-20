@@ -1,20 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@apollo/react-hooks";
-import { Link, NavLink } from "react-router-dom";
 
 import Navigation from "../Navigation";
 
-import logoBlack from "../../assets/logo_black.svg";
-import logoWhite from "../../assets/logo_white.svg";
-import burger from "../../assets/burger.svg";
-import closedBurger from "../../assets/closedBurger.svg";
 
 import HEADER_QUERY from "../../queries/header/header.js";
 
 
 
 const Header = () => {
-  const [menuStatus, setMenuStatus] = useState("closed");
 
   const { loading, error, data } = useQuery(HEADER_QUERY)
 
