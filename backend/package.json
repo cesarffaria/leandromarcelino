@@ -8,6 +8,7 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
+    "postbuild": "react-snap",
     "build:win": "cross-env NODE_ENV=production npm run build",
     "strapi": "strapi"
   },

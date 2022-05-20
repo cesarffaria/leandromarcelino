@@ -1,11 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { useQuery } from "@apollo/react-hooks";
 import { Link, NavLink , useLocation} from "react-router-dom";
 
-import Navigation from "../Navigation";
-
-import logoBlack from "../../assets/logo_black.svg";
-import logoWhite from "../../assets/logo_white.svg";
 import burger from "../../assets/burger.svg";
 import closedBurger from "../../assets/closedBurger.svg";
 
@@ -35,8 +31,8 @@ const Header = () => {
           />
         </NavLink>
         <div className="burger">
-          <Link to={location != "/menu" ? `/menu` : `/`}>
-            <img src={location != "/menu" ? burger : closedBurger} />
+          <Link to={location !== "/menu" ? `/menu` : `/`}>
+            <img alt="" src={location !== "/menu" ? burger : closedBurger} />
           </Link>
         </div>
       </div>

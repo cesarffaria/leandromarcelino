@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink} from 'react-router-dom'
 
 import { useQuery } from "@apollo/react-hooks";
-import { Container, Row, Col } from "react-bootstrap";
 
 import HEADER_QUERY from "../../queries/header/header.js";
 
