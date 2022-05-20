@@ -787,6 +787,33 @@ img.portfolio-imagem-projeto img{
     }
 }
 
+@media screen and (min-width:992px) {
+    .portfolio-gallery > .row {
+        display: block;
+    }
+
+    .portfolio-gallery > .row .col-lg-8 {
+        width: 71.6%;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .portfolio-gallery > .row .col-lg-8 img {
+        height: 100%;
+        object-fit: cover;
+        left: 1rem;
+        position: relative;
+    }
+    .portfolio-gallery > .row > div[class*="col-"] {
+        float: left;
+        margin-top: 1.52rem;
+    }
+    .portfolio-gallery > .row > div[class*="col-"] + div[class*="col-"]{
+        margin-left: 1rem;
+    }
+
+}
+
 @media only screen and (max-width:1000px) {
     .space-4 {
         height: 2em !important;
